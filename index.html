@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Furtura</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="font-montserrat" id="home">
+		<!-- header -->
+		<header class="header w-full h-full flex justify-between items-center">
+			<div class="container mx-auto px-4">
+				<div class="flex justify-between items-center">
+					<div class="logo">
+						<a href="/" title="Furtura" class="logo__text">
+							Fur<span class="text-primary">tura</span>
+						</a>
+					</div>
+
+					<nav class="flex items-center">
+						<ul class="hidden sm:flex space-x-10">
+							<li><a href="#home" class="nav__link" title="Home">Home</a></li>
+							<li>
+								<a href="#about" class="nav__link" title="About">About</a>
+							</li>
+							<li>
+								<a href="#services" class="nav__link" title="Services"
+									>Services</a
+								>
+							</li>
+							<li><a href="#faq" class="nav__link" title="FAQ">FAQ</a></li>
+						</ul>
+						<div class="flex items-center">
+							<button
+								id="mode-btn"
+								class="theme__btn block"
+								type="button"
+								role="button"
+								data-theme="light"
+							>
+								<span class="light block"
+									><svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="h-6 w-6"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+										/>
+									</svg>
+								</span>
+								<span class="dark hidden">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="h-6 w-6"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+										/>
+									</svg>
+								</span>
+							</button>
+							<button
+								id="menu-btn"
+								class="block sm:hidden text-gray-900 dark:text-white"
+								aria-label="Menu Icon"
+							>
+								<span class="flex items-center justify-center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="h-6 w-6"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M4 6h16M4 12h16m-7 6h7"
+										/>
+									</svg>
+								</span>
+							</button>
+						</div>
+					</nav>
+					<div class="mobilemenu block sm:hidden">
+						<div class="mobilemenu__overlay"></div>
+						<div class="mobilemenu__sidebar">
+							<div
+								class="px-4 py-3 mb-4 bg-gray-800 dark:bg-gray-900 flex justify-between items-center"
+							>
+								<div class="logo">
+									<a href="/" title="Furtura" class="logo__text text-white">
+										Fur<span class="text-primary">tura</span>
+									</a>
+								</div>
+								<button
+									id="hide-mobilemenu"
+									class="mobilemenu__close-btn flex justify-center items-center text-gray-200"
+									title="Close"
+									role="button"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="h-6 w-6"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M6 18L18 6M6 6l12 12"
+										/>
+									</svg>
+								</button>
+							</div>
+							<div class="px-4 mb-4">
+								<p class="text-base text-gray-600 dark:text-gray-400">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Dolorem, sed!
+								</p>
+							</div>
+							<div class="">
+								<ul>
+									<li class="w-full">
+										<a
+											href="#home"
+											class="px-4 py-2 block mobilemenu__link"
+											title="Home"
+											>Home</a
+										>
+									</li>
+									<li class="w-full">
+										<a
+											href="#about"
+											class="px-4 py-2 block mobilemenu__link"
+											title="About"
+											>About</a
+										>
+									</li>
+									<li class="w-full">
+										<a
+											href="#services"
+											class="px-4 py-2 block mobilemenu__link"
+											title="Services"
+											>Services</a
+										>
+									</li>
+									<li class="w-full">
+										<a
+											href="#faq"
+											class="px-4 py-2 block mobilemenu__link"
+											title="FAQ"
+											>FAQ</a
+										>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<!-- Heading -->
+			<section>
+				<div class="container mx-auto px-4">
+					<div
+						class="flex flex-col-reverse md:flex-row justify-between items-center"
+					>
+						<div class="col md:col-6">
+							<div class="heading max-w-md">
+								<h1 class="heading__header">Design your house interior</h1>
+								<p class="heading__text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+									ex esse, itaque cum praesentium aperiam accusamus numquam
+									consequatur alias minima facilis veniam?
+								</p>
+								<a href="#services" class="heading__btn">Explore Now</a>
+							</div>
+						</div>
+						<div class="col md:col-6">
+							<div class="header__bg"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Services -->
+			<section class="py-32" id="services">
+				<div class="container mx-auto px-4">
+					<h5 class="text-primary section__header">Services</h5>
+
+					<div
+						class="flex flex-col md:flex-row flex-wrap justify-between items-center"
+					>
+						<div class="col md:col-6 lg:col-4 px-4">
+							<div class="services__column">
+								<div class="w-full h-full">
+									<img
+										src="./assets/images/services-image-1.jpg"
+										alt="Room Desk"
+										class="services__image"
+									/>
+								</div>
+								<div class="services__content">
+									<h3 class="services__title">Furniture</h3>
+									<p class="services__description">
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col md:col-6 lg:col-4 px-4">
+							<div class="services__column">
+								<img
+									src="./assets/images/services-image-1.jpg"
+									alt="Room Desk"
+									class="services__image"
+								/>
+								<div class="services__content">
+									<h3 class="services__title">Furniture</h3>
+									<p class="services__description">
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col md:col-6 lg:col-4 px-4">
+							<div class="services__column">
+								<img
+									src="./assets/images/services-image-1.jpg"
+									alt="Room Desk"
+									class="services__image"
+								/>
+								<div class="services__content">
+									<h3 class="services__title">Furniture</h3>
+									<p class="services__description">
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- about -->
+			<section class="py-28 bg-primary" id="about">
+				<div class="container mx-auto px-4">
+					<h5 class="about__heading">About</h5>
+					<div class="flex flex-col lg:flex-row justify-between lg:items-end">
+						<div class="col lg:col-7 xxl:col-6">
+							<div class="max-w-3xl">
+								<img src="./assets/images/about-img.jpg" alt="About Image" />
+							</div>
+						</div>
+						<div class="col lg:col-5 xxl:col-6">
+							<div class="about__content bg-white dark:bg-gray-700">
+								<h4
+									class="text-center text-2xl text-primary font-semibold mb-4"
+								>
+									A bit about us
+								</h4>
+								<div
+									class="max-w-md mx-auto text-base text-gray-600 dark:text-gray-400"
+								>
+									<p class="mb-4">
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+										Quod aliquam architecto eveniet Voluptas!
+									</p>
+									<p class="mb-4">
+										Veniam, optio facere libero non quis mollitia earum quo
+										minus amet dolore.
+									</p>
+									<p class="mb-4">
+										Asperiores sequi ullam tempora quo, ea animi. Odio, iste
+										fugit quas eius nam corrupti.
+									</p>
+									<p>
+										Omnis excepturi nesciunt at, dolorem rerum, consequuntur
+										dolore reiciendis quisquam delectus facere possimus, modi in
+										pariatur tenetur obcaecati.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- faq -->
+			<section class="py-32" id="faq">
+				<div class="container mx-auto px-4">
+					<h5 class="text-primary section__header">Faq</h5>
+					<div class="max-w-3xl mx-auto space-y-6">
+						<details class="faq__details">
+							<summary class="faq__details-summary">
+								Frequently New Design
+							</summary>
+							<div class="faq__details-content">
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Officia veritatis non blanditiis recusandae reiciendis.
+								</p>
+							</div>
+						</details>
+						<details class="faq__details">
+							<summary class="faq__details-summary">
+								Original Production
+							</summary>
+							<div class="faq__details-content">
+								<p>
+									We have the entire industrial chain of furniture products and
+									provide the most advantageous price.
+								</p>
+							</div>
+						</details>
+						<details class="faq__details">
+							<summary class="faq__details-summary">
+								Production With Large Stock
+							</summary>
+							<div class="faq__details-content">
+								<p>
+									Veniam beatae quis iste hic facilis itaque, nihil adipisci
+									deleniti quas consectetur atque eveniet a animi suscipit
+									voluptates laboriosam incidunt earum consequatur, nam
+									provident fugit! Neque, eligendi.
+								</p>
+							</div>
+						</details>
+						<details class="faq__details">
+							<summary class="faq__details-summary">
+								Professional Quality Control
+							</summary>
+							<div class="faq__details-content">
+								<p>
+									Reiciendis, dolore, vero veritatis fugiat quam iure atque
+									recusandae repudiandae quidem iusto aperiam ex odit culpa unde
+									doloribus placeat quaerat sit!
+								</p>
+								<p>
+									Similique eum inventore non quaerat excepturi debitis, unde
+									rerum quidem, quibusdam facere vitae modi libero ipsam
+									quisquam voluptas illo, fugiat nisi distinctio odio ad
+									accusamus. Illo quae nesciunt odit et.
+								</p>
+							</div>
+						</details>
+					</div>
+				</div>
+			</section>
+
+			<section class="map__section">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7344.549930928322!2d72.58989762224009!3d23.01367421480356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85ca087dd10b%3A0x64a8d2c94a807c81!2sGita%20Mandir%20New%20Bus%20Stand!5e0!3m2!1sen!2sin!4v1640020124938!5m2!1sen!2sin"
+					width="100%"
+					height="100%"
+					style="border: 0"
+					allowfullscreen=""
+				></iframe>
+			</section>
+		</main>
+
+		<!-- footer -->
+		<footer class="w-full bg-gray-100 footer">
+			<div class="container mx-auto px-4 py-10">
+				<div class="flex flex-col sm:flex-row justify-between flex-wrap mb-8">
+					<div class="col sm:col-6 lg:col-3 mb-8 lg:mb-0">
+						<div class="px-4">
+							<div class="logo mb-5.5">
+								<a href="/" title="Furtura" class="logo__text text-black">
+									Fur<span class="text-primary">tura</span>
+								</a>
+							</div>
+							<div class="space-y-3">
+								<div class="flex items-center sm:items-start">
+									<span
+										class="flex items-center justify-center text-gray-800 dark:text-gray-400"
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											class="h-6 w-6"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke="currentColor"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+											/>
+										</svg>
+									</span>
+									<span class="ml-2 text-gray-600 dark:text-gray-400">
+										+918978607289
+									</span>
+								</div>
+								<div class="flex items-center sm:items-start">
+									<span
+										class="flex items-center justify-center text-gray-800 dark:text-gray-400"
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											class="h-6 w-6"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke="currentColor"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+											/>
+										</svg>
+									</span>
+									<a
+										class="inline-block text-gray-600 ml-2 dark:text-gray-400"
+										href="mailto:contact@futura.com"
+									>
+										contact@futura.com
+									</a>
+								</div>
+								<div class="flex items-center sm:items-start">
+									<span
+										class="text-gray-800 flex items-center justify-center dark:text-gray-400"
+										><svg
+											xmlns="http://www.w3.org/2000/svg"
+											class="h-6 w-6"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke="currentColor"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+											/>
+										</svg>
+									</span>
+									<span class="ml-2 text-sm text-gray-600 dark:text-gray-400">
+										B/32 Gita Madir, Ahmedabad, Gujarat, India.</span
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col sm:col-6 lg:col-3 mb-8 lg:mb-0">
+						<div class="footer__column px-4">
+							<h5 class="footer__title">Company</h5>
+							<ul class="footer__links-list">
+								<li><a href="#home" class="footer__link">Home</a></li>
+								<li><a href="#about" class="footer__link">About</a></li>
+								<li><a href="#faq" class="footer__link">FAQ</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col sm:col-6 lg:col-3 mb-8 sm:mb-0">
+						<div class="footer__column px-4">
+							<h5 class="footer__title">Services</h5>
+							<ul class="footer__links-list">
+								<li><a href="#services" class="footer__link">Services</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col sm:col-6 lg:col-3">
+						<div class="footer__column px-4">
+							<h5 class="footer__title">Follow Us On</h5>
+							<ul class="flex items-center">
+								<li class="follow__item">
+									<a href="javascript:void(0)" class="follow__link">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 32 32"
+											class="h-7 w-7"
+											fill="currentColor"
+										>
+											<g>
+												<path
+													d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z"
+												></path>
+											</g>
+										</svg>
+									</a>
+								</li>
+								<li class="follow__item">
+									<a href="javascript:void(0)" class="follow__link">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 32 32"
+											class="h-7 w-7"
+											fill="currentColor"
+										>
+											<g>
+												<path
+													d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336"
+												></path>
+											</g>
+										</svg>
+									</a>
+								</li>
+								<li class="follow__item">
+									<a href="javascript:void(0)" class="follow__link">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 32 32"
+											class="h-7 w-7"
+											fill="currentColor"
+										>
+											<g>
+												<path
+													d="M26 25.963h-4.185v-6.55c0-1.56-.027-3.57-2.175-3.57-2.18 0-2.51 1.7-2.51 3.46v6.66h-4.182V12.495h4.012v1.84h.058c.558-1.058 1.924-2.174 3.96-2.174 4.24 0 5.022 2.79 5.022 6.417v7.386zM8.23 10.655a2.426 2.426 0 0 1 0-4.855 2.427 2.427 0 0 1 0 4.855zm-2.098 1.84h4.19v13.468h-4.19V12.495z"
+												></path>
+											</g>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div
+					class="text-sm text-gray-600 px-4 pt-5 border-t border-gray-200 dark:border-gray-700"
+				>
+					<p class="text-gray-500 dark:text-gray-400" id="copyright">
+						Copyright <span id="copyright-year"></span> Furtura. All rights
+						reserved.
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<button id="scroll-top" class="scroll__top-btn">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="h-6 w-6"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M5 10l7-7m0 0l7 7m-7-7v18"
+				/>
+			</svg>
+		</button>
+	</body>
+	<script src="./js/main.js"></script>
+</html>

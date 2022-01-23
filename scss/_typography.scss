@@ -1,0 +1,56 @@
+@import './variables';
+
+.text-white {
+	color: var(--clr-white);
+}
+
+.text-black {
+	color: var(--clr-black);
+}
+
+.text-primary {
+	color: var(--clr-primary);
+}
+
+.text-gray-200 {
+	color: var(--clr-gray-200);
+}
+
+.text-gray-600 {
+	color: var(--clr-gray-600);
+}
+
+.text-gray-800 {
+	color: var(--clr-gray-800);
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-sm {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+
+.text-base {
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+.text-2xl {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
+.font-normal {
+	font-weight: normal;
+}
+
+.font-semibold {
+	font-weight: 600;
+}
+
+.font-bold {
+	font-weight: 700;
+}

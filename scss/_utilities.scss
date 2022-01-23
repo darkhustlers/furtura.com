@@ -1,0 +1,320 @@
+@import './variables';
+@import './mixins';
+
+.w-full {
+	width: 100%;
+}
+
+.w-6 {
+	width: 1.5rem;
+}
+
+.w-7 {
+	width: 1.75rem;
+}
+
+.max-w-sm {
+	max-width: 24rem;
+}
+
+.max-w-md {
+	max-width: 28rem;
+}
+
+.max-w-3xl {
+	max-width: 48rem;
+}
+
+.h-full {
+	height: 100%;
+}
+
+.h-6 {
+	height: 1.5rem;
+}
+
+.h-7 {
+	height: 1.75rem;
+}
+
+.container {
+	width: 100%;
+
+	@each $point, $value in $breakpoints {
+		@include mq($point) {
+			max-width: #{$value};
+		}
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+.block {
+	display: block;
+}
+
+.flex {
+	display: flex;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+@each $point, $value in $breakpoints {
+	@include mq($point) {
+		.#{$point}\: {
+			&hidden {
+				display: none;
+			}
+			&block {
+				display: block;
+			}
+			&flex {
+				display: flex;
+			}
+		}
+	}
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.flex-col-reverse {
+	flex-direction: column-reverse;
+}
+
+@each $point, $value in $breakpoints {
+	@include mq($point) {
+		.#{$point}\: {
+			&flex-row {
+				flex-direction: row;
+			}
+		}
+	}
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.items-center {
+	align-items: center;
+}
+
+.items-start {
+	align-items: flex-start;
+}
+
+.items-end {
+	align-items: flex-end;
+}
+
+@each $point, $value in $breakpoints {
+	@include mq($point) {
+		.#{$point}\: {
+			&items-center {
+				align-items: center;
+			}
+			&items-start {
+				align-items: flex-start;
+			}
+			&items-end {
+				align-items: flex-end;
+			}
+		}
+	}
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.col {
+	width: 100%;
+}
+
+.col-3 {
+	width: 25%;
+}
+
+.col-4 {
+	width: 33.3333333%;
+}
+
+.col-5 {
+	width: 41.6666667%;
+}
+
+.col-6 {
+	width: 50%;
+}
+
+.col-7 {
+	width: 58.3333333%;
+}
+
+@each $point, $value in $breakpoints {
+	@include mq($point) {
+		.#{$point}\: {
+			&col {
+				width: 100%;
+			}
+			&col-3 {
+				width: 25%;
+			}
+			&col-4 {
+				width: 33.3333333%;
+			}
+			&col-5 {
+				width: 41.6666667%;
+			}
+			&col-6 {
+				width: 50%;
+			}
+			&col-7 {
+				width: 58.3333333%;
+			}
+		}
+	}
+}
+
+.ml-2 {
+	margin-left: 0.5rem;
+}
+
+.mb-5\.5 {
+	margin-bottom: 1.3rem;
+}
+
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mb-0 {
+	margin-bottom: 0;
+}
+
+.mb-4 {
+	margin-bottom: 1rem;
+}
+
+.mb-8 {
+	margin-bottom: 2rem;
+}
+
+@each $point, $value in $breakpoints {
+	@include mq($point) {
+		.#{$point}\: {
+			&mb-0 {
+				margin-bottom: 0;
+			}
+			&mb-4 {
+				margin-bottom: 1rem;
+			}
+			&mb-8 {
+				margin-bottom: 8rem;
+			}
+		}
+	}
+}
+
+.px-4 {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.pt-5 {
+	padding-top: 1.25rem;
+}
+
+.py-2 {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.py-3 {
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+}
+
+.py-10 {
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+}
+
+.py-20 {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+
+.py-28 {
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+}
+
+.py-32 {
+	padding-top: 9rem;
+	padding-bottom: 9rem;
+}
+
+.space-x-10 > * + * {
+	margin-left: 2.5rem;
+}
+
+.space-y-3 > * + * {
+	margin-top: 0.75rem;
+}
+
+.space-y-6 > * + * {
+	margin-top: 1.5rem;
+}
+
+.font-montserrat {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.bg-primary {
+	background-color: var(--clr-primary);
+}
+
+.bg-white {
+	background-color: var(--clr-white);
+}
+
+.bg-gray-100 {
+	background-color: var(--clr-gray-100);
+}
+
+.bg-gray-200 {
+	background-color: var(--clr-gray-200);
+}
+
+.bg-gray-800 {
+	background-color: var(--clr-gray-800);
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+.opacity-100 {
+	opacity: 1;
+}
+
+.border-t {
+	border-top-width: 1px;
+	border-top-style: solid;
+}
+
+.border-gray-200 {
+	border-color: var(--clr-gray-200);
+}
